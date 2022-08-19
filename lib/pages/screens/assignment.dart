@@ -1,8 +1,9 @@
 import 'dart:async';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/foundation.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:line_icons/line_icons.dart';
 import 'package:studentconsole/components/constants.dart';
 import 'package:studentconsole/flutterfire/modals/user.dart';
 import 'package:flutter_cached_pdfview/flutter_cached_pdfview.dart';
@@ -221,6 +222,7 @@ class ShowAssignment extends StatelessWidget {
   }
 }
 
+// ignore: must_be_immutable
 class ViewPdf extends StatelessWidget {
   String pdfLink;
   String title;
@@ -249,7 +251,10 @@ class ViewPdf extends StatelessWidget {
         pdfLink,
         placeholder: (progress) => Center(
           // child: Text('$progress %'),
-          child: CircularProgressIndicator(semanticsValue: '$progress %'),
+          child: CircularProgressIndicator(
+            semanticsValue: '$progress %',
+            color: primaryColor,
+          ),
         ),
         errorWidget: (error) => Center(child: Text(error.toString())),
       ),

@@ -44,8 +44,7 @@ Future login(
     } on FirebaseAuthException catch (e) {
       if (e.code == 'user-not-found') {
         newSnackBar(context, title: 'User not found!');
-      }
-      if (e.code == 'invalid-email') {
+      } else if (e.code == 'invalid-email') {
         newSnackBar(context, title: 'Enter a valid email');
       } else if (e.code == 'wrong-password') {
         newSnackBar(context, title: 'Enter correct Password!');

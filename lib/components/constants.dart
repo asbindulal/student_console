@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+bool loginbtn = true;
+
 // Colors
 
 const scaffoldBackgroundColor = Color.fromARGB(255, 245, 245, 245);

@@ -61,6 +61,7 @@ class _AttendanceState extends State<Attendance> {
         stream: FirebaseFirestore.instance
             .collection(
                 '/studentconsole/attendance/${currentUser.batch}${currentUser.faculty}${currentUser.section}')
+            .orderBy('time', descending: true)
             .where("uid", isEqualTo: currentUser.uid)
             .limit(50)
             .snapshots(),

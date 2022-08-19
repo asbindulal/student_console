@@ -58,28 +58,30 @@ class _LoginState extends State<Login> {
                         ],
                       ),
                       gap,
-                      Padding(
-                        padding: const EdgeInsets.fromLTRB(50, 0, 50, 0),
-                        child: MaterialButton(
-                          padding: const EdgeInsets.fromLTRB(0, 12, 0, 12),
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(30),
-                          ),
-                          minWidth: double.maxFinite,
-                          color: primaryColor,
-                          splashColor: black,
-                          onPressed: () {
-                            login(
-                              context,
-                              email: emailController.text,
-                              password: passwordController.text,
-                            );
-                          },
-                          child: Text(
-                            'Login',
-                            style: buttonStyle(
-                              color: white,
-                              fw: FontWeight.w500,
+                      Center(
+                        child: Padding(
+                          padding: const EdgeInsets.fromLTRB(50, 0, 50, 0),
+                          child: MaterialButton(
+                            padding: const EdgeInsets.fromLTRB(0, 12, 0, 12),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(30),
+                            ),
+                            minWidth: double.maxFinite,
+                            color: primaryColor,
+                            splashColor: black,
+                            onPressed: () {
+                              login(
+                                context,
+                                email: emailController.text,
+                                password: passwordController.text,
+                              );
+                            },
+                            child: Text(
+                              'Login',
+                              style: buttonStyle(
+                                color: white,
+                                fw: FontWeight.w500,
+                              ),
                             ),
                           ),
                         ),

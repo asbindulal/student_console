@@ -23,15 +23,9 @@ class DefaultFirebaseOptions {
       case TargetPlatform.android:
         return android;
       case TargetPlatform.iOS:
-        throw UnsupportedError(
-          'DefaultFirebaseOptions have not been configured for ios - '
-          'you can reconfigure this by running the FlutterFire CLI again.',
-        );
+        return ios;
       case TargetPlatform.macOS:
-        throw UnsupportedError(
-          'DefaultFirebaseOptions have not been configured for macos - '
-          'you can reconfigure this by running the FlutterFire CLI again.',
-        );
+        return macos;
       case TargetPlatform.windows:
         throw UnsupportedError(
           'DefaultFirebaseOptions have not been configured for windows - '
@@ -65,5 +59,25 @@ class DefaultFirebaseOptions {
     messagingSenderId: '916784473458',
     projectId: 'student-console-asbin',
     storageBucket: 'student-console-asbin.appspot.com',
+  );
+
+  static const FirebaseOptions ios = FirebaseOptions(
+    apiKey: 'AIzaSyDn4TTfuOzjMKp-MSytW3mklEeT8CrQzkA',
+    appId: '1:916784473458:ios:32220ea765c64b4f54e9eb',
+    messagingSenderId: '916784473458',
+    projectId: 'student-console-asbin',
+    storageBucket: 'student-console-asbin.appspot.com',
+    iosClientId: '916784473458-5kb1d36mdn328v8t7619pna3jrbre7i6.apps.googleusercontent.com',
+    iosBundleId: 'np.com.asbin.studentconsole',
+  );
+
+  static const FirebaseOptions macos = FirebaseOptions(
+    apiKey: 'AIzaSyDn4TTfuOzjMKp-MSytW3mklEeT8CrQzkA',
+    appId: '1:916784473458:ios:32220ea765c64b4f54e9eb',
+    messagingSenderId: '916784473458',
+    projectId: 'student-console-asbin',
+    storageBucket: 'student-console-asbin.appspot.com',
+    iosClientId: '916784473458-5kb1d36mdn328v8t7619pna3jrbre7i6.apps.googleusercontent.com',
+    iosBundleId: 'np.com.asbin.studentconsole',
   );
 }
