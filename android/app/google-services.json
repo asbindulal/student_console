@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "916784473458",
+    "project_id": "student-console-asbin",
+    "storage_bucket": "student-console-asbin.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:916784473458:android:c0963076be531bbd54e9eb",
+        "android_client_info": {
+          "package_name": "np.com.asbin.studentconsole"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "916784473458-tj28t8vccl8a6jehi3i6q6eqlm2vl21s.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCqLE4PG5g1c1e-T3Yr8PsGApxAuKFrJao"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "916784473458-tj28t8vccl8a6jehi3i6q6eqlm2vl21s.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "916784473458-5kb1d36mdn328v8t7619pna3jrbre7i6.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "np.com.asbin.studentconsole"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
