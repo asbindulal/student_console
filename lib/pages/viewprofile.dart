@@ -161,18 +161,6 @@ class _ViewProfileState extends State<ViewProfile> {
               const SizedBox(
                 height: 3,
               ),
-              ListTile(
-                tileColor: white,
-                iconColor: black,
-                leading: Text(
-                  'Attendance',
-                  style: bodyStyle(
-                    color: darkGrey,
-                  ),
-                ),
-                trailing: const Icon(LineIcons.arrowRight),
-                onTap: () {},
-              ),
             ],
           ),
         ),

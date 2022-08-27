@@ -158,7 +158,7 @@ class _MessageShowState extends State<MessageShow> {
         centerTitle: true,
         title: Text(
           '${currentUser.batch} ${currentUser.faculty} ${currentUser.section}',
-          style: bodyStyle(
+          style: lStyle(
             color: black,
           ),
         ),

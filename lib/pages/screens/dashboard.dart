@@ -53,102 +53,62 @@ class _DashboardState extends State<Dashboard> {
               ],
             ),
             getAttendanceData(),
-            Card(
-              elevation: 0,
-              child: Padding(
-                padding: const EdgeInsets.all(12.0),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Row(
-                      children: [
-                        Text(
-                          'Latest Assignment',
-                          style: lStyle(
-                            color: black,
-                            fw: FontWeight.w400,
-                          ),
+            currentUser.user == 'admin'
+                ? Padding(
+                    padding: const EdgeInsets.all(5.0),
+                    child: MaterialButton(
+                      onPressed: () {
+                        Navigator.of(context).pushNamed('/postassignment');
+                      },
+                      color: primaryColor,
+                      child: Padding(
+                        padding: const EdgeInsets.all(12.0),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            const Icon(
+                              LineIcons.tasks,
+                              size: 50,
+                              color: white,
+                            ),
+                            Text(
+                              'Assign Assignment',
+                              style: lStyle(color: white),
+                            )
+                          ],
                         ),
-                      ],
+                      ),
                     ),
-                  ],
-                ),
-              ),
-            ),
-            Card(
-              elevation: 0,
-              child: Padding(
-                padding: const EdgeInsets.all(12.0),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Row(
-                      children: [
-                        Text(
-                          'Latest Notice',
-                          style: lStyle(
-                            color: black,
-                            fw: FontWeight.w400,
-                          ),
+                  )
+                : Container(),
+            currentUser.user == 'admin'
+                ? Padding(
+                    padding: const EdgeInsets.all(5.0),
+                    child: MaterialButton(
+                      onPressed: () {
+                        Navigator.of(context).pushNamed('/postnotice');
+                      },
+                      color: primaryColor,
+                      child: Padding(
+                        padding: const EdgeInsets.all(12.0),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            const Icon(
+                              LineIcons.bullhorn,
+                              size: 50,
+                              color: white,
+                            ),
+                            Text(
+                              'Send Notice',
+                              style: lStyle(color: white),
+                            )
+                          ],
                         ),
-                      ],
+                      ),
                     ),
-                  ],
-                ),
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(5.0),
-              child: MaterialButton(
-                onPressed: () {
-                  Navigator.of(context).pushNamed('/postassignment');
-                },
-                color: primaryColor,
-                child: Padding(
-                  padding: const EdgeInsets.all(12.0),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      const Icon(
-                        LineIcons.tasks,
-                        size: 50,
-                        color: white,
-                      ),
-                      Text(
-                        'Assign Assignment',
-                        style: lStyle(color: white),
-                      )
-                    ],
-                  ),
-                ),
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(5.0),
-              child: MaterialButton(
-                onPressed: () {
-                  Navigator.of(context).pushNamed('/postnotice');
-                },
-                color: primaryColor,
-                child: Padding(
-                  padding: const EdgeInsets.all(12.0),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      const Icon(
-                        LineIcons.bullhorn,
-                        size: 50,
-                        color: white,
-                      ),
-                      Text(
-                        'Send Notice',
-                        style: lStyle(color: white),
-                      )
-                    ],
-                  ),
-                ),
-              ),
-            ),
+                  )
+                : Container(),
           ],
         ),
       ),
